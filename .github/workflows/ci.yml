@@ -42,7 +42,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.TURBO_TOKEN }}
+          token: ${{ secrets.MY_TOKEN }}
           branch: main
           folder: apps/web/.next
           repository-name: kobevino/kobevino.github.io
