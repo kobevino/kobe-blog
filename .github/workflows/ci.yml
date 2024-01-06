@@ -44,4 +44,4 @@ jobs:
         with:
           branch: main
           folder: apps/web/.next
-          repository-name: kobevino.github.io
+          repository-name: kobevino/kobevino.github.io
