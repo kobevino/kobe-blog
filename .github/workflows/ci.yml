@@ -37,7 +37,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build && touch ./out/.nojekyll
+        run: pnpm build && touch ./apps/web/out/.nojekyll
       
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
