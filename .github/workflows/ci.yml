@@ -44,5 +44,5 @@ jobs:
         with:
           token: ${{ secrets.MY_TOKEN }}
           branch: main
-          folder: apps/web/.next
+          folder: apps/web/out
           repository-name: kobevino/kobevino.github.io
