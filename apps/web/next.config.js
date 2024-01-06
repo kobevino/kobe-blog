@@ -2,5 +2,5 @@
 module.exports = {
   transpilePackages: ["@repo/ui"],
   output: 'export',
-  assetPrefix: './'
+  assetPrefix: '/'
 };
