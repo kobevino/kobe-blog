@@ -42,6 +42,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: kobevino
           branch: main
           folder: apps/web/.next
           repository-name: kobevino/kobevino.github.io
