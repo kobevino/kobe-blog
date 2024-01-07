@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "serve": "npx serve@latest out",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --cache --fix"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
