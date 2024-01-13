@@ -8,6 +8,9 @@ interface ButtonProps {
   appName: string
 }
 
+const TEST = 'TEST'
+console.log(TEST)
+
 export const Button = ({ children, className, appName }: ButtonProps) => {
   return (
     <button
