@@ -34,6 +34,7 @@ module.exports = {
     // Ignore dotfiles
     '.*.js',
     'node_modules/',
+    '*.js',
   ],
   overrides: [{ files: ['*.js?(x)', '*.ts?(x)'] }],
 }
