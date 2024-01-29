@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Oleo_Script, Kaushan_Script } from 'next/font/google'
+import { getContents } from 'services/contents'
 
 const oleoScript = Oleo_Script({ subsets: ['latin'], weight: ['400'] })
 const kaushanScript = Kaushan_Script({ subsets: ['latin'], weight: ['400'] })
 
-export default function Page(): JSX.Element {
+export default async function Page(): Promise<JSX.Element> {
+  const res = await getContents()
+  console.log(res)
+
   return (
     <div className="mx-auto max-w-2xl px-5 py-12">
       <header className="flex justify-between items-center mb-8">
@@ -25,7 +29,7 @@ export default function Page(): JSX.Element {
           </Link>
         </span>
       </header>
-      <main>Contents</main>
+      <main></main>
     </div>
   )
 }
