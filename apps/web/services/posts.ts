@@ -2,6 +2,14 @@ import { readFile, readdir } from 'fs/promises'
 import matter from 'gray-matter'
 import { join } from 'path'
 
+export interface IPost {
+  slug: string
+  title: string
+  date: string
+  subTitle: string
+  tag: string
+}
+
 export async function getPosts() {
   const POSTS_DIR_PATH = join(process.cwd(), '/posts/')
   const dirEntries = await readdir(POSTS_DIR_PATH, {
@@ -18,7 +26,7 @@ export async function getPosts() {
       return {
         slug: dirEntry.name,
         ...data,
-      }
+      } as IPost
     })
 
   const posts = await Promise.all(postPromises)

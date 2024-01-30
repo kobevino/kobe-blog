@@ -2,13 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Oleo_Script, Kaushan_Script } from 'next/font/google'
 import { getPosts } from 'services/posts'
+import { Post } from 'components'
 
 const oleoScript = Oleo_Script({ subsets: ['latin'], weight: ['400'] })
 const kaushanScript = Kaushan_Script({ subsets: ['latin'], weight: ['400'] })
 
 export default async function Page(): Promise<JSX.Element> {
-  const res = await getPosts()
-  console.log(res)
+  const posts = await getPosts()
 
   return (
     <div className="mx-auto max-w-2xl px-5 py-12">
@@ -29,7 +29,11 @@ export default async function Page(): Promise<JSX.Element> {
           </Link>
         </span>
       </header>
-      <main></main>
+      <main>
+        {posts.map(post => (
+          <Post key={post.slug} {...post} />
+        ))}
+      </main>
     </div>
   )
 }
