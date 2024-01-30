@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Oleo_Script, Kaushan_Script } from 'next/font/google'
-import { getContents } from 'services/contents'
+import { getPosts } from 'services/posts'
 
 const oleoScript = Oleo_Script({ subsets: ['latin'], weight: ['400'] })
 const kaushanScript = Kaushan_Script({ subsets: ['latin'], weight: ['400'] })
 
 export default async function Page(): Promise<JSX.Element> {
-  const res = await getContents()
+  const res = await getPosts()
   console.log(res)
 
   return (
