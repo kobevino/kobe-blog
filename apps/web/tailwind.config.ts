@@ -18,6 +18,15 @@ const config: Pick<Config, 'content' | 'presets' | 'theme'> = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
+      pink: colors.pink,
+      purple: colors.purple,
+      ladoga: {
+        900: '#98b8e1',
+        700: '#adc6e7',
+        500: '#c1d4ed',
+        300: '#d6e3f3',
+        100: '#eaf1f9',
+      },
     },
   },
 }
