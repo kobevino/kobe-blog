@@ -18,10 +18,35 @@ module.exports = {
     node: true,
     browser: true,
   },
-  plugins: ['prettier'],
+  plugins: ['prettier', 'import'],
   rules: {
     'prettier/prettier': 'warn',
     'prefer-const': 'error',
+    'import/order': [
+      'warn',
+      {
+        groups: ['builtin', 'external', 'internal', 'type', 'unknown'],
+        pathGroups: [
+          {
+            pattern: 'components',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        'newlines-between': 'always',
+        distinctGroup: false,
+      },
+    ],
+    'sort-imports': [
+      'warn',
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
   },
   settings: {
     'import/resolver': {
