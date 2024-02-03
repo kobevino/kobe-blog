@@ -1,6 +1,7 @@
 import { readFile, readdir } from 'fs/promises'
-import matter from 'gray-matter'
 import { join } from 'path'
+
+import matter from 'gray-matter'
 
 export interface IPost {
   slug: string

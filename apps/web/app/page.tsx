@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import { Kaushan_Script, Oleo_Script } from 'next/font/google'
 import Image from 'next/image'
-import { Oleo_Script, Kaushan_Script } from 'next/font/google'
+import Link from 'next/link'
+
 import { getPosts } from 'services/posts'
 import { Post } from 'components'
 

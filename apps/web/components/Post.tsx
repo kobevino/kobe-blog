@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { IPost } from 'services/posts'
 
 type Props = Omit<IPost, 'tag'>
